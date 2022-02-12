@@ -36,6 +36,10 @@ public class Recipe {
 		}		
 	}
 	
+	public void removeIngredient(String n, double w) {
+		
+	}
+	
 	public List<Ingredient> getIngredients(){
 		return ingredients;
 	}
