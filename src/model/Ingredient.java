@@ -4,6 +4,7 @@ import exceptions.NegativeNumberException;
 
 
 public class Ingredient {
+	
 	private String name;
 	private double weight;
 	
@@ -21,16 +22,22 @@ public class Ingredient {
 	}
 	
 	public void addWeight(double additionalW) throws NegativeNumberException{
-			
-		weight = weight + additionalW;
 		
 		if(additionalW<0) {
-			throw new NegativeNumberException(this.name, additionalW);
+			throw new NegativeNumberException();
+		}else {
+			
+			weight = weight + additionalW;
 		}
 	}
 	
-	public void removeWeight(double w )  {
-		weight = weight - w;
+	public void removeWeight(double w ) throws NegativeNumberException  {
+		if(w<0) {
+			throw new NegativeNumberException();
+		}else {
+			weight = weight - w;
+		}
+
 	}
 	
 }

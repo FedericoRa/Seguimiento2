@@ -27,7 +27,7 @@ class RecipeTest {
 	@Test
 	void test() {
 		setupStage1();
-		recipe.addIngredient("sal", 10);
+		recipe.addIngredient("sal", 12);
 		
 		//asserts
 		assertEquals(1, recipe.getIngredients().size());
@@ -39,10 +39,10 @@ class RecipeTest {
 		setupStage2();
 		recipe.addIngredient("pimienta", 6);
 		
-		Ingredient ultimo = recipe.getIngredients().get(recipe.getIngredients().size()-1);
+		Ingredient last = recipe.getIngredients().get(recipe.getIngredients().size()-1);
 		
 		//asserts
-		assertEquals("pimienta", ultimo.getName());
+		assertEquals("pimienta", last.getName());
 		assertEquals(4, recipe.getIngredients().size());
 				
 	
@@ -52,11 +52,11 @@ class RecipeTest {
 		setupStage2(); 
 		recipe.addIngredient("ajo", 21);
 		
-		Ingredient requerido = recipe.getIngredients().get(recipe.getIngredients().size()-2);
+		Ingredient requested = recipe.getIngredients().get(recipe.getIngredients().size()-2);
 		
 		//asserts
-		assertEquals("ajo", requerido.getName());
-		assertEquals(79, requerido.getWeight());
+		assertEquals("ajo", requested.getName());
+		assertEquals(79, requested.getWeight());
 				
 	
 	}

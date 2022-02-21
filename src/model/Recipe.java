@@ -36,7 +36,14 @@ public class Recipe {
 		}		
 	}
 	
-	public void removeIngredient(String n, double w) {
+	public void removeIngredient(String n) {
+		
+		for(int i=0; i < ingredients.size();i++) {
+			Ingredient current = ingredients.get(i);
+			if(current.getName().equals(n)) {
+				ingredients.remove(current);
+			}
+		}
 		
 	}
 	
